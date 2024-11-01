@@ -1,0 +1,72 @@
+input[type="text"] {
+    padding: 10px;
+    width: 250px;
+    font-size: 1rem;
+    border: 2px solid #ff6b6b;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+  
+  input[type="text"]:focus {
+    border-color: #ffa07a;
+  }
+  
+  label {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #f5f5f5;
+    margin-top: 20px;
+  }
+  
+  #countryDisplay {
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: #6a98e2;
+    margin-top: 15px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    text-align: center;
+  }
+  
+  #map {
+    height: 450px;
+    width: 90%;
+    max-width: 800px;
+    margin: 25px auto;
+    border: 3px solid #333;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  #mapLinks {
+    margin-top: 20px;
+    font-size: 1.1rem;
+    text-align: center;
+  }
+  
+  #mapLinks a {
+    color: lightskyblue;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+    margin: 0 8px;
+  }
+  
+  #mapLinks a:hover {
+    color: lightblue;
+  }
+  .country-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.country-flag {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.country-name {
+    font-size: 16px;
+}

@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Quicksand:wght@400;700&display=swap');
+body {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    background: linear-gradient(to right, #ADD8E6, #E4EfE9);
+    height: 100;
+}
+
+/* Header styling */
+header {
+    background-color: #C2E9FB;
+    display: flex;
+    justify-content: space-between; /* Space out the home button and logo */
+    align-items: center;
+    width: 100%; /* Ensure the header takes full width */
+}
+
+/* Style for the home button */
+.home-button {
+    background-color: transparent; 
+    color: #4078b5; 
+    border: none; 
+    padding: 10px; 
+    cursor: pointer; 
+    font-size: 24px; 
+    margin-left: 20px;
+}
+
+.home-button:hover {
+    color: #0056b3; /* Change color on hover */
+}
+
+h1 {
+    margin: 30px 0 20px; 
+    color: #333;
+    font-size: 1.8em;
+    text-align: center;
+}
+/* Filter Button Container */
+.button-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 1200px;
+    justify-content: center;
+}
+
+/* Filter Buttons */
+.button-group button {
+    background-color: rgb(32, 162, 205);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover and Active Effects */
+.button-group button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.button-group button:active {
+    background-color: #003f8a;
+    transform: translateY(0);
+}
+/*flag container*/
+.carousel-container {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    position: relative;
+    padding: 20px 0;
+    overflow: hidden;
+}
+
+.carousel {
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-slide {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.country-group {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    min-width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-top: 10px;
+    height: 100%;
+    cursor: pointer;
+}
+.country {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.country:hover {
+    transform: scale(1.05);
+}
+
+.country img {
+    width: 50px;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.country span {
+    font-weight: bold;
+    color: #333;
+    display: block;
+    margin-top: 5px;
+}
+/* Style for the modal */
+.modal-content {
+    padding: 20px;
+}
+
+/* Circular shape for the country flag */
+.country-flag {
+    width: 100px; /* Adjust as needed */
+    height: 100px; /* Adjust as needed */
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; 
+    margin-bottom: 10px; 
+}
+
+/* Style for the country name */
+.country-name {
+    font-size: 24px; /* Larger font size for emphasis */
+    font-weight: bold; /* Makes the text bold */
+    text-align: center; /* Center aligns the country name */
+    color: #333; /* Change color as needed */
+    margin: 10px 0; /* Space above and below the name */
+}
+
+
+.nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 16px;
+}
+
+.nav-button.left {
+    left: 10px;
+    z-index: 10; /* Ensure it is on top */
+}
+
+.nav-button.right {
+    right: 10px;
+    z-index: 10; /* Ensure it is on top */
+}
+
+.nav-button:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.country-group {
+    margin-top: 60px; /* Adjust this value as needed */
+}
+
+/* Modal styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal content styling */
+.modal-content {
+    background-color: whitesmoke;
+    border-radius: 15px; /* Rounded corners */
+    margin: 15% auto; /* Center the modal */
+    padding: 20px;
+    border: 2px solid navy; /* Blue border */
+    width: 80%; /* Could be more or less, depending on screen size */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Soft shadow */
+    text-align: center; /* Center text */
+}
+
+/* Flag image in modal */
+#modalFlag {
+    border-radius: 50%; 
+    margin-top: 10px; 
+    width: 100px;
+    height: 100px; 
+    object-fit: cover; /* Ensure the image covers the entire area */
+}
+
+/* Title style in modal */
+.modal-content h2 {
+    color: navy;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Modal text styling */
+.modal-content p {
+    color: #333; /* Text color */
+    font-size: 18px; /* Font size */
+    margin: 10px 0; /* Margin around paragraphs */
+}
+.close {
+    color: #007bff; /* Match close button with title */
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #0056b3; /* Darken on hover */
+    text-decoration: none;
+    cursor: pointer;
+}
+footer {
+    background-color: #C2E9FB; /* Light blue background */
+    color: #333; /* Dark text color */
+    text-align: center; /* Center text */
+    padding: 20px; /* Add padding for spacing */
+    position: relative; /* Ensure it stays at the bottom of the content */
+    bottom: 0; /* Align at the bottom */
+    width: 100%; /* Full width */
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1); /* Light shadow for separation */
+}
+
+footer p {
+    margin: 0; /* Remove default margin */
+    font-size: 14px; /* Font size */
+}

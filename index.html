@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>World Explorer</title>
+    <link rel="stylesheet" href="search.css" />
+    <link rel="stylesheet" href="index.css" />
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1 class="logo">Vista World!</h1>
+    </header>
+
+    <!-- Main Wrapper Section -->
+    <div class="wrapper">
+        <div class="content">
+            <h1>Explore the Wonders of the World</h1>
+            <p>From vibrant cities to serene landscapes, adventure awaits you.</p>
+            <button class="hero" onclick="window.location.href='country.html'">Explore World</button>
+        </div>
+    </div>
+
+    <!-- Search Container -->
+    <div class="search-container">
+        <input type="text" id="countryInput" placeholder="Country name" />
+        <button class="search-button" onclick="buttonClick()">🔍</button>
+    </div>
+
+    <!-- Country Information and Links -->
+    <br />
+    <div class="container">
+        <p id="countryDisplay"></p>
+        <div id="mapLinks" style="display: none;">
+            <a id="googleMapsLink" target="_blank">Google Maps</a> |
+            <a id="openStreetMapsLink" target="_blank">OpenStreetMap</a>
+        </div>
+    </div>
+
+    <!-- Map Container -->
+    <div id="map" style="height: 400px; width: 80%; margin-top: 20px;"></div>
+
+    <!-- Buttons under the Map -->
+    <div class="button-container" style="margin-top: 20px;">
+        <button onclick="viewCountryDetails()">View Country Details</button>
+        <button onclick="window.location.href='crud.html'">Add to Wishlist</button>
+    </div>
+
+    <!-- Container for Displaying Country Details -->
+    <div id="countryModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Country Details</h2>
+            <div id="country-details"></div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Vista World. All rights reserved.</p>
+    </footer>    
+
+    <script src="main.js"></script>
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+</body>
+</html>

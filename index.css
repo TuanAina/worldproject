@@ -1,0 +1,225 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Quicksand:wght@400;700&display=swap');
+
+/* Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color:  #f7f6f4;
+  font-family: 'Montserrat', sans-serif; /* Default font */
+}
+
+/* Header and Navigation */
+header {
+  background-color: #C2E9FB;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #4D4D4D;
+}
+
+@keyframes backgroundChange {
+  0% {
+    background: linear-gradient(to right, #A1C4FD, #FFF5DD);
+  }
+  25% {
+    background: linear-gradient(to right,#FFF5DD, #A1C4FD);
+  }
+  50% {
+    background: linear-gradient(to right, #ADD8E6, #FFF5DD);
+  }
+  75% {
+    background: linear-gradient(to right,#FFF5DD,#ADD8E6);
+  }
+  100% {
+    background: linear-gradient(to right, #A1C4FD, #FFF5DD);
+  }
+}
+.search-button {
+  background-color: rgb(207, 220, 255); /* Background color */
+  border: none;
+  border-radius: 15px; /* Rounded corners */
+  padding: 10px 15px; /* Padding for a larger clickable area */
+  font-size: 24px; /* Font size for the emoji */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+}
+
+.search-button:hover {
+  background-color: #e0e0e0; /* Darker background on hover */
+  transform: scale(1.1); /* Slightly enlarge the button on hover */
+}
+
+.search-button:focus {
+  outline: none; /* Remove outline when focused */
+}
+
+/* Wrapper Section */
+.wrapper {
+  background: linear-gradient(to right, #A1C4FD, #FFF5DD); /* Gradient background */
+  width: 100%;
+  height: 500px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 50px;
+  animation: backgroundChange 4s infinite;
+}
+/* Hero Button */
+.hero {
+  background-color: #5299e4;
+  color: white;
+  padding: 15px 30px;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+}
+
+/* Hero Button hover effect */
+.hero:hover {
+  background-color: #0056b3; 
+  transform: translateY(-2px);
+}
+
+/* Hero Button focus effect */
+.hero:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+}
+
+
+.content {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 1; /* Always visible */
+}
+
+.content h1 {
+  font-size: 45px;
+  color: #004B43;
+  margin-bottom: 15px;
+}
+
+.content p {
+  font-size: 19px;
+  color: #4D4D4D;
+  margin-bottom: 20px; /* Space below paragraph */
+}
+
+/* Search Container */
+.search-container {
+  display: flex;
+  justify-content: center; /* Center the items horizontally */
+  margin-top: 20px; /* Space from the top */
+  width: 100%; /* Set width to 100% of parent */
+}
+
+
+#countryInput {
+  padding: 10px;
+  border: 2px solid #b2b4b3; /* Dark gray border */
+  border-radius: 5px; /* Rounded corners */
+  width: 250px; /* Set a width for the input */
+  margin-right: 10px; /* Space between input and button */
+}
+
+/* Button Styles */
+button {
+  padding: 10px 15px;
+  background-color: cadetblue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: grey; /* Change background color on hover */
+}
+
+/* Button Container */
+.button-container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  margin-top: 20px; /* Space above the buttons */
+  margin-bottom: 30px; /* Add margin-bottom for gap */
+}
+
+.button-container button {
+  margin: 0 10px; /* Space between buttons */
+  padding: 10px 20px; /* Button padding */
+  font-size: 16px; /* Button font size */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Modal Styles */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1000; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.7); /* Black w/ opacity */
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 10% auto; /* 10% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+  max-width: 600px; /* Maximum width for larger screens */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for better visibility */
+  border-radius: 5px; /* Rounded corners */
+  text-align: center; /* Center the text */
+}
+
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+footer {
+    background-color: #C2E9FB; /* Light blue background */
+    color: #333; /* Dark text color */
+    text-align: center; /* Center text */
+    padding: 20px; /* Add padding for spacing */
+    position: relative; /* Ensure it stays at the bottom of the content */
+    bottom: 0; /* Align at the bottom */
+    width: 100%; /* Full width */
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1); /* Light shadow for separation */
+}
+
+footer p {
+    margin: 0; /* Remove default margin */
+    font-size: 14px; /* Font size */
+}

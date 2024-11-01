@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="wishlist.css" />
+</head>
+<body>
+    <header>
+        <button id="homeBtn" class="home-button" onclick="window.location.href='index.html'">
+            <i class="fas fa-home"></i> <!-- Home icon only -->
+        </button>
+        <h1 class="logo">Vista World!</h1>
+    </header>    
+    <div class="MainWrapper">
+        <h1>Travel Plan</h1>
+        <form>
+            <div class="form-group">
+                <br>
+                <label style="color: navy;">Wishlist Country</label>
+                <input id="fileName" type="text" class="form-control"> 
+            </div>
+            <div class="form-group">
+                <label style="color: navy;">Wishlist Name</label>
+                <input id="wishlistname" type="text" class="form-control">
+            </div>
+            <div class="form-group">
+                <label style="color: navy;">Travel Dates</label>
+                <div class="date-picker-group">
+                    <label style="font-size: small;">From:</label>
+                    <input id="startDate" type="date" class="form-control"> 
+                    <label style="font-size: small;">To:</label>
+                    <input id="endDate" type="date" class="form-control">
+                </div>
+            </div>            
+            <div class="form-group">
+                <label style="color: navy;">Plan Activities</label>
+                <textarea id="fileContents" class="form-control" rows="5"></textarea>
+            </div> 
+        </form>
+        <button id="btnCreate" class="btn btn-default">Create</button> 
+        <button id="btnRead" class="btn btn-default">Read</button> 
+        <button id="btnDelete" class="btn btn-default">Delete</button>
+        <button id="btnUpdate" class="btn btn-default">Update</button>
+    </div>
+    
+    <!-- Alert Modal Structure -->
+<div id="alertModal" class="modal">
+    <div class="modal-content">
+        <span id="closeModal" class="close">&times;</span>
+        <p id="alertMessage"></p>
+        <button id="modalButton" class="modal-button">OK</button>
+    </div>
+</div>
+<div id="deleteModal" class="modal">
+        <div class="modal-content">
+            <span id="closeDeleteModal" class="close">&times;</span>
+            <p>Are you sure you want to delete this file?</p>
+            <button id="confirmDeleteButton" class="modal-button">Yes</button>
+            <button id="cancelDeleteButton" class="modal-button">No</button>
+        </div>
+</div>
+
+<div id="creationInfo" style="display:none; padding:10px; border:1px solid #ddd; margin-top:10px;">
+    <h4>File Created:</h4>
+    <p id="createdFileName"></p>
+    <p id="createdFileCountry"></p> <!-- Wishlist Country display -->
+    <p id="createdFileDate"></p>    <!-- Date Travel display -->
+    <pre id="createdFileContents"></pre>
+</div>
+<!-- Delete Confirmation Modal Structure -->
+
+
+<br>
+    <footer>
+        <p>&copy; 2024 Vista World All rights reserved.</p>
+    </footer>
+    <script src="crud.js"></script>
+</body>
+</html>
